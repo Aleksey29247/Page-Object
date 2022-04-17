@@ -22,7 +22,20 @@ public class DataHelper {
     }
 
     public static VerificationCode getVerificationCodeFor (AuthInfo authInfo){
-        return new VerificationCode("12345");
+         return new VerificationCode("12345");
         }
 
+    @Value
+    public static class CardInfo {
+        private String summa;
+        private String number;
+    }
+
+    public static CardInfo getInfoForTransfer(AuthInfo authInfo) {
+        return new CardInfo("10000", "5559 0000 0000 0001");
+    }
+
+    public static CardInfo getOtherInfoForTransfer(AuthInfo authInfo) {
+        return new CardInfo("10000", "5559 0000 0000 0001");
+    }
 }
