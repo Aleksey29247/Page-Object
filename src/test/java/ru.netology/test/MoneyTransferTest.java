@@ -2,7 +2,6 @@ package ru.netology.test;
 
 
 import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.DataHelper;
 import ru.netology.page.LoginPageV1;
@@ -23,7 +22,6 @@ public class MoneyTransferTest {
         var verificationPage = loginPage.validLogin(authInfo);
         var verifyInfo = DataHelper.getVerificationCodeFor(authInfo);
         var dashboardPage = verificationPage.validVerify(verifyInfo);
-
 
 
 
